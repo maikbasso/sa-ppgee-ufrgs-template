@@ -1,0 +1,23 @@
+# Created by Maik Basso <maik@maikbasso.com.br>
+
+#your name
+NAME=MaikBasso
+
+#event
+EVENT=SA
+
+#event date
+EVENTDATE=2018-2
+
+#project name
+PROJECTNAME=$(NAME)-$(EVENT)-$(EVENTDATE)
+
+#folder to output pdfs for paper and presentation
+OUTPUTFOLDER=../output
+
+#name of main tex file for paper and presentation
+MAINTEXFILE=main
+
+#define the builder commands
+BUILDTEX=pdflatex
+BUILDBIB=bibtex

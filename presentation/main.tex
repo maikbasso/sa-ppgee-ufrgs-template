@@ -1,0 +1,388 @@
+%definindo as propriedades do beamer
+\documentclass[handout]{beamer}
+\usetheme{Madrid} % AnnArbor % Antibes % Bergen % Berkeley % Berlin % Boadilla % boxes % CambridgeUS % Copenhagen % Darmstadt % default % Dresden % Frankfurt % Goettingen % Hannover % Ilmenau % JuanLesPins % Luebeck % Madrid % Malmoe % Marburg % Montpellier % PaloAlto % Pittsburgh % Rochester % Singapore % Szeged % Warsaw
+\usecolortheme{whale} % albatross % beaver % beetle % crane % default % dolphin % dove % fly % lily % orchid % rose % seagull % seahorse % sidebartab % whale % wolverine	
+\useinnertheme{rounded} % rectangles % circles % inmargin % rounded
+\useoutertheme{infolines} % infolines % miniframes % shadow % sidebar % smoothbars % smoothtree % split % tree
+\usefonttheme{professionalfonts}
+
+% essenciais
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{textpos}
+\usepackage{media9}
+\usepackage{multicol}
+\usepackage{graphicx}
+\graphicspath{{../images/logos/} {../images/content/}}
+\usepackage{verbatim}
+
+%remove the icon
+\setbeamertemplate{bibliography item}{}
+
+%remove line breaks
+\setbeamertemplate{bibliography entry title}{}
+\setbeamertemplate{bibliography entry location}{}
+\setbeamertemplate{bibliography entry note}{}
+
+% página de título
+\titlegraphic{
+	\includegraphics[width=2cm]{logo-ufrgs}
+	\hspace{0.3cm}
+	\includegraphics[width=2cm]{logo-ppgee}
+}
+
+% outras páginas
+\addtobeamertemplate{frametitle}{}{
+	\begin{textblock*}{100mm}(.82\textwidth,-0.9cm)
+		\includegraphics[height=0.8cm,width=2.5cm]{logos-top}
+	\end{textblock*}
+}
+%\logo{
+	%\includegraphics[width=1cm]{logo-ufrgs}
+	%\hspace{0.3cm}
+	%\includegraphics[width=1cm]{logo-ppgee}
+%}
+
+%defini-se o título
+\title[Seminário de Andamento]{Título aqui!!!}
+
+%define-se o nome do autor
+\author[Maik Basso]{Maik Basso\\ \textit{maik@maikbasso.com.br} }
+
+%define-se a instituição e o orientador
+\institute[UFRGS]{Orientador: Edison Pignaton de Freitas}
+
+%data
+\date{2017/2}
+
+\begin{document}
+
+\begin{frame}[plain] %plain remove the bottom bar
+	\titlepage
+\end{frame}
+
+\begin{frame}{Roteiro da apresentação}
+	\tableofcontents
+\end{frame}
+
+\section{Introdução}
+
+% \begin{frame}{Introdução}
+% 	\begin{columns}
+% 		\begin{column}{0.7\textwidth}
+%    			\begin{itemize}
+%    				\item Veículo aéreo não tripulado (VANT) é toda e qualquer aeronave que não necessita de piloto embarcado para ser guiada
+%    				%\item Popularmente conhecidos como DRONES (Dynamic Remotely Operated Navigation Equipment, em português, Equipamento dinâmico de navegação com operação remota)
+%    				\item Podem ser autônomos, parcialmente autônomos ou/e controlados remotamente
+%    				\item Utilização em aplicações militares, agricultura (AP), lazer e etc.
+%    				\item Mapeamento, monitoramento, detecção e etc.
+%    			\end{itemize}
+% 		\end{column}
+% 		\begin{column}{0.3\textwidth}
+%     		\begin{center}
+%      		\includegraphics[width=0.9\textwidth]{uav-scenario}
+%      		\end{center}
+% 		\end{column}
+% 	\end{columns}
+% \end{frame}
+
+% \begin{frame}{Arquitetura estado da arte}
+% 		\begin{figure}[ht]
+% 		\centering
+% 		\includegraphics[scale=.35]{without-framework}
+% 		\caption{Arquitetura genérica do estado da arte.}
+% 	\end{figure}
+% \end{frame}
+
+% \section{Proposta}
+
+% \begin{frame}{Proposta do trabalho}
+% 	\begin{center}
+% 		\textbf{Framework} Para Controle De Missão E Guiamento Autônomo De Veículos Aéreos Não Tripulados Baseado Em \textbf{Visão Computacional}
+% 	\end{center}
+% 	\begin{itemize}
+% 		\item \textbf{Framework}: 
+% 		\begin{itemize}
+% 			\item Uma abastração composta de várias bibliotécas e classes de software provendo uma funcionalidade genérica
+% 			\item Provê a base para a implementação de uma aplicação
+% 			\item Dita o fluxo de controle e dados da aplicação
+% 		\end{itemize}
+% 		\item \textbf{Visão Computacional}: 
+% 		\begin{itemize}
+% 			\item Sistemas artificiais capazes de detectar e desenvolver a percepção do meio ambiente através de informações de imagem ou dados multidimensionais
+% 			\item Prover a interação do robô com ambiente
+% 		\end{itemize}
+% 	\end{itemize}
+% \end{frame}
+
+% \section{Framework Drone-Control}
+
+% \begin{frame}{Framework Drone-Control}
+% 	\begin{block}{Objetivos}
+% 		\begin{itemize}
+% 			\item Prover a comunicação entre software e hardware;
+% 			\item Possibilitar a integração entre softwares desenvolvidos em linguagens diferentes;
+% 			\item Manter o desempenho na troca de mensagens (tempo);
+% 			\item Ser escalável, possibilitar a comunicação entre $1$ ou $n$ VANTs e $1$ ou $m$ algoritmos clientes;
+% 			\item Ser tolerante à falhas (comunicação);
+% 		\end{itemize}
+% 	\end{block}
+% \end{frame}
+
+% \begin{frame}{Framework Drone-Control: arquitetura 1}
+% 		\begin{figure}[ht]
+% 		\centering
+% 		\includegraphics[scale=.35]{FrameworkDroneControl1}
+% 		\caption{Arquitetura do framework proposto.}
+% 	\end{figure}
+% \end{frame}
+
+% \begin{frame}{Framework Drone-Control: arquitetura 2}
+% 		\begin{figure}[ht]
+% 		\centering
+% 		\includegraphics[scale=.35]{FrameworkDroneControl2}
+% 		\caption{Arquitetura do framework proposto com sistemas distribuídos.}
+% 	\end{figure}
+% \end{frame}
+
+% \begin{frame}{Framework Drone-Control: arquitetura 3}
+% 		\begin{figure}[ht]
+% 		\centering
+% 		\includegraphics[scale=.35]{FrameworkDroneControl3}
+% 		\caption{Arquitetura do framework proposto com conexão externa.}
+% 	\end{figure}
+% \end{frame}
+
+% \begin{frame}{Framework: fluxo de execução}
+% 	\begin{figure}[ht]
+% 		\centering
+% 		\includegraphics[scale=.45]{diagrama-drone-server}
+% 		\caption{Funcionamento do framework proposto.}
+% 	\end{figure}
+% \end{frame}
+
+% \begin{frame}[fragile]{Framework: mensagens}
+% 	\begin{verbatim}
+% {
+%     "command": "setPosition",
+%     "args": {
+%         "x": 10,
+%         "y": 5,
+%         "z": 2,
+%     }
+% }
+% 	\end{verbatim}
+% 	\begin{itemize}
+% 		\item Os comandos são abstraídos em mensagens compostas por arrays no formato \textit{JSON} e enviados pelos algorítmos clientes para o framework
+% 		\item As mensagens são decodificadas e os comandos tratados pela rotina de execução do framework 
+% 	\end{itemize}
+% \end{frame}
+
+% \begin{frame}{Teste realizado em simulador}
+% 	\begin{figure}[!htb]
+%     	\centering
+%     	\includegraphics[scale=0.23]{test-drone-control}
+%     	\caption{Missão de teste realizado em simulador.}
+%     	\label{fig:uav-hardware}
+%   	\end{figure}
+% \end{frame}
+
+% \begin{frame}{Hardware}
+% 	\begin{figure}[!htb]
+%     	\centering
+%     	\includegraphics[scale=0.33]{uav-hardware}
+%     	\caption{Hardware utilizado no projeto.}
+%     	\label{fig:uav-hardware}
+%   	\end{figure}
+% \end{frame}
+
+% \section{Estudo de caso em agricultura de precisão}
+
+% \begin{frame}{Estudo de caso em agricultura de precisão}
+% 	\begin{figure}[!htb]
+% 		\centering
+% 		\includegraphics[scale=.20]{vantpulverizacao}
+% 		\caption{VANT realizando a pulverização. Fonte: Google Images.}
+% 	\end{figure}
+% 	\begin{itemize}
+% 		\item Ojetivos:
+% 		\begin{itemize}
+% 			\item Aplicar de forma pontual e autoregulada maximizando o reservatório
+% 			\item Evitar disperdícios
+% 			\item Automatizar o processo
+% 		\end{itemize}
+% 	\end{itemize}
+% \end{frame}
+
+% \subsection{Algoritmo para aplicação otimizada de agroquímicos}
+
+% \begin{frame}{Aplicação otimizada de agroquímicos: GNDVI}
+% 	\begin{columns}
+% 		\begin{column}{0.7\textwidth}
+%    			\begin{itemize}
+% 				\item Coeficiênte de reflectância:
+% 				\[GNDVI = \frac{NIR - G}{NIR + G}\]
+% 				\item Aplicando-se na imagem e obtendo GNDVI médio:
+% 				\[GNDVI_{AVG} = \frac{\sum_{x=0}^{W} \sum_{y=0}^{H} GNDVI(x,y)}{H \cdot W}\]
+% 				\item Resultado por frame:
+% 				\[GNDVI_{AVG} = [-1,...,1]\]
+% 			\end{itemize}
+% 		\end{column}
+% 		\begin{column}{0.3\textwidth}
+%     		\begin{figure}[ht]
+% 				\centering
+% 				\includegraphics[scale=40]{rpi-noir-camera}
+% 				\caption{Câmera Raspberry Pi NoIR.}
+% 			\end{figure}
+% 		\end{column}
+% 	\end{columns}
+% \end{frame}
+
+% \begin{frame}{Aplicação otimizada de agroquímicos: cenário}
+% 	\begin{columns}
+% 		\begin{column}{0.5\textwidth}
+%    			\begin{figure}[ht]
+% 				\centering
+% 				\includegraphics[scale=1]{fpsxuavspeed}
+% 				\caption{Momento da aquisição do frame.}
+% 			\end{figure}
+% 		\end{column}
+% 		\begin{column}{0.5\textwidth}
+%     		\begin{figure}[ht]
+% 				\centering
+% 				\includegraphics[scale=1]{fpsxuavspeed-2}
+% 				\caption{Momento da pulverização.}
+% 			\end{figure}
+% 		\end{column}
+% 	\end{columns}
+% \end{frame}
+
+% \begin{frame}{Aplicação otimizada de agroquímicos: resultados}
+% 	\begin{figure}[ht]
+% 		\centering
+% 		\includegraphics[scale=.35]{results-gndvi}
+% 		\caption{Resultados obtidos nos experimentos de GNDVI.}
+% 	\end{figure}
+% \end{frame}
+
+% \begin{frame}{Artigo 1}
+% 	\begin{figure}[!htb]
+%     	\centering
+%     	\includegraphics[scale=0.33]{artigo-ndvi}
+%     	\caption{Artigo submetido ao Journal Precision Agriculture - Springer.}
+%     	\label{fig:artigo-ndvi}
+%   	\end{figure}
+%   	\begin{itemize}
+%   		\item URL: https://link.springer.com/journal/11119
+%   		\item Qualis 2016: B1 - Engenharias IV
+%   		\item Status atual: Em avaliação
+%   	\end{itemize}
+% \end{frame}
+
+% \subsection{Algoritmo de guiamento}
+
+% \begin{frame}{Algoritmo de guiamento}
+% 	\begin{block}{Objetivos}
+% 		\begin{itemize}
+% 			\item Realizar a condução autônoma do VANT sobre plantações de agricultura de precisão
+% 		\end{itemize}
+% 	\end{block}
+% 	\begin{exampleblock}{Solução proposta}
+% 		\begin{itemize}
+% 			\item Utilizar processamento de imagens embarcado para identificação das linhas da plantação e posterior condução do VANT
+% 			\item Implementar e melhorar o algoritmo CRD (Crop Row Detection, em português, detecção de linha de plantação) para execução em hardware embarcado de baixo custo
+% 		\end{itemize}
+% 	\end{exampleblock}
+% \end{frame}
+
+% \begin{frame}{Algoritmo de guiamento}
+% 	\begin{figure}[!htb]
+%     	\centering
+%     	\includegraphics[scale=0.28]{pld}
+%     	\caption{Algoritmos CRD e de guiamento propostos.}
+%     	\label{fig:pld}
+%   	\end{figure}
+% \end{frame}
+
+% \begin{frame}{Artigo 2}
+% 	\begin{itemize}
+% 		\item Título: Autonomous UAV Guidance Using Crop Row Detection Algorithm
+% 		\item Autores: Maik Basso e Edison Pignaton de Freitas
+%   		\item Journal: à definir 
+%   		\item Status atual: Escrita em endamento / realizando testes
+%   	\end{itemize}
+% \end{frame}
+
+% \begin{frame}{Capítulo de Livro}
+% 	\begin{itemize}
+% 		\item Livro: Imaging And Sensing For Unmanned Aerial Vehicles: Volume 1 - Control And Performance
+% 		\item Capítulo: 2. Vision in Indoor and Outdoor Drones
+% 		\item Autores: Maik Basso e Edison Pignaton de Freitas
+% 		\item Será publicado por: Institution of Engineering and Technology (IET)
+%   		\item Status atual: Resumo aprovado, prazo para entrega do capítulo 30/01/2018
+%   	\end{itemize}
+% \end{frame}
+
+
+% \section{Conclusões parciais}
+
+% \begin{frame}{Conclusões parciais}
+% 	\begin{itemize}
+% 		\item O framework proposto tornou-se um facilitador na implementação de algoritmos de visão computacional, tal como sua integração com o hardware
+% 		\item O desempenho e flexibilidade do framework estão sendo testados através dos estudos de caso realizados
+% 		\item Estudos de caso:
+% 		\begin{itemize}
+% 			\item Propõe-se um sistema para aplicação pontual e autoregulada de agroquímicos usando VANTs
+% 			\item Prova-se a viabilidade de utilização do algoritmo CRD para condução de VANTs sobre plantações de agricultura de precisão
+% 		\end{itemize}	
+% 	\end{itemize}
+% \end{frame}
+
+% \section{Cronograma}
+
+\begin{frame}{Cronograma}
+\begin{table}[h]\footnotesize
+\centering
+\caption{Cronograma}
+\label{tb:cronograma}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Etapas} & \multicolumn{2}{l|}{\textbf{2016/1}} & \multicolumn{2}{l|}{\textbf{2016/2}} & \multicolumn{2}{l|}{\textbf{2017/1}} & \multicolumn{2}{l|}{\textbf{2017/2}} & \multicolumn{1}{l|}{\textbf{Fev/18}} \\ \hline
+Disciplinas & X & X & X & X &  &  &  &  &  \\ \hline
+Proficiência &  &  &  &  &  & X &  &  &  \\ \hline
+Estágio Docência &  &  &  &  & X & X &  &  &  \\ \hline
+Revisão bibliográfica &  &  & X & X & X & X &  &  &  \\ \hline
+Implementação &  &  & X & X & X & X & X & X &  \\ \hline
+Testes &  &  & X & X &  &  & X & X &  \\ \hline
+Escrita de artigos &  &  & X & X &  &  & X & X  &  \\ \hline
+Escrita da dissertação &  &  &  &  & X & X & X & X &  \\ \hline
+Defesa &  &  &  &  &  &  &  &  & X \\ \hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\section{Referências}
+
+\begin{frame}[allowframebreaks]{Referências}
+	\tiny
+	%\cite{woebbecke1995color,jiang2010machine,7003860,7009678,6525881,7500600,7500671}
+	\bibliographystyle{IEEEtran.bst}
+	\nocite{*}
+	%\bibliographystyle{apalike}
+	\bibliography{../library/base.bib}
+\end{frame}
+
+\begin{frame}{Dúvidas?}
+	\begin{figure}[h]
+		\includegraphics[width=4cm]{perguntas}
+	\end{figure}
+	\begin{center}
+		\normalsize
+		Maik Basso \\
+		\textit{maik@maikbasso.com.br}
+	\end{center}
+\end{frame}
+
+\end{document}
