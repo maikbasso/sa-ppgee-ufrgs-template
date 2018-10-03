@@ -22,7 +22,7 @@ $ cd ~ && git clone https://github.com/maikbasso/sa-ppgee-ufrgs-template.git
 ```
 
 ## Configurando o projeto
-Altere o arquivo conforme desejado. "Senão souber o que está fazendo, não o faça!":
+Altere o arquivo conforme desejado. "Se não souber o que está fazendo, não o faça!":
 ```
 $ nano ~/sa-ppgee-ufrgs-template/configuration/envfile
 ```
