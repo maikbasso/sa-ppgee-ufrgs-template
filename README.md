@@ -9,7 +9,7 @@ Alguns links importantes:
 - PPGEE-UFRGS: http://www.ufrgs.br/ppgee/
 - DELAETEX: http://www.ece.ufrgs.br/~fetter/deletex/
 
-# Requisitos
+## Requisitos
 Este pacote requer a instalação da plataforma latex no linux. Para a instalação utilize o comando:
 ```
 $ sudo apt-get install texlive-full 
@@ -61,7 +61,7 @@ $ cd paper && make && cd ..
 ```
 Para compilar somente a apresentação:
 ```
-$ cd paper && make && cd ..
+$ cd presentation && make && cd ..
 ```
 Os arquivos PDFs serão adicionados na pasta configurada no arquivo de configurações.
 Por padrão a pasta é:
